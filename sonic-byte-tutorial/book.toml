@@ -14,13 +14,13 @@ default-theme = "coal"
 preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/antonarhipov/sonic-byte"
 edit-url-template = "https://github.com/antonarhipov/sonic-byte/sonic-byte-tutorial/edit/main/{path}"
-additional-js = ["src/pdf-toc.js"]
-additional-css = ["src/pdf-toc.css"]
+#additional-js = ["src/pdf-toc.js"]
+#additional-css = ["src/pdf-toc.css"]
 
 [output.html.fold]
 enable = true
 level = 1
 
-[output.pdf]
-generate-document-outline = true
-optional = true
+#[output.pdf]
+#generate-document-outline = true
+#optional = true
