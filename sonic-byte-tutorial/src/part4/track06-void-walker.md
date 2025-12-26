@@ -332,6 +332,23 @@ The title evokes:
 
 The slow tempo and sparse arrangement embody walking through the void.
 
+## Hacker Challenges
+
+1. **Go Slower**: Drop to 85 BPM. At what tempo does "menacing" become "boring"? Where's the floor?
+
+2. **Remove All Reverb**: Strip the atmospheric effects entirely. Does the track still have power, or was the space doing all the work?
+
+3. **Add a Pulse**: Introduce a quiet, steady 8th-note element (maybe a filtered arp or just a soft click). Does it add drive or fight the half-time feel?
+
+4. **Drone Layer**: Add a sustained low note that never changes:
+   ```ruby
+   use_synth :dark_ambience
+   play :b1, amp: 0.3, attack: 4, sustain: 100, release: 4
+   ```
+   Does constant bass add weight or become oppressive?
+
+5. **Double the Tempo Feel**: Keep BPM at 95 but change drums to 4-on-floor. Same tempo, completely different energy. Which is more "Void Walker"?
+
 ## Full Code
 
 The complete track code is available in `06_void_walker.rb`.

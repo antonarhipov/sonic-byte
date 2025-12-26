@@ -245,6 +245,25 @@ With double-time kicks, mix carefully:
 - **Hat volume:** Lower (0.22 vs 0.25) — there are twice as many
 - **Bass:** Same level, but filter more aggressively in intros
 
+## Hacker Challenges
+
+1. **Quad-Time Madness**: Push the kicks even further — 16 per bar instead of 8. At what point does it stop being music and become noise? Where's the line?
+
+2. **Swing the Hats**: Instead of perfect 16th notes, try:
+   ```ruby
+   16.times do |i|
+     hat h
+     sleep i.even? ? 0.27 : 0.23  # Slight shuffle
+   end
+   ```
+   Does it feel more human or just sloppy?
+
+3. **Filter the Riff**: The `mod_saw` riff is bright and cutting. Wrap it in a low-pass filter that opens during the build. Does it create more anticipation?
+
+4. **Remove the Sub Layer**: Delete the `:sine` sub from the bass. What's lost? Is the track still powerful or does it feel hollow?
+
+5. **Create a Counter-Riff**: Write a second riff pattern that plays against the first. Can you create call-and-response between two `mod_saw` lines?
+
 ## Full Code
 
 The complete track code is available in `02_nerve_damage.rb`.

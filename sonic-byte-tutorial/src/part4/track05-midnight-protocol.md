@@ -325,6 +325,22 @@ This makes the track "breathe" instead of hammer.
 
 A moment of beauty in a brutal album.
 
+## Hacker Challenges
+
+1. **Major Key Experiment**: Change the arpeggio from C minor to C major (`:c4, :e4, :g4, :c5...`). How dramatically does the mood shift? Can dark clubbing work in major keys?
+
+2. **Double-Time Arp**: Run the arpeggio at 16th notes (`sleep 0.25`) instead of 8th notes. Does it add energy or become too busy?
+
+3. **Strip the Shimmer**: Remove the octave-up `:saw` layer from the lead. What's lost? Is the shimmer essential or decorative?
+
+4. **Write a Counter-Melody**: Create `mel5` that plays *against* the main melodies — different rhythm, complementary notes. Can two melodies coexist without fighting?
+
+5. **Synthwave the Drums**: Replace the industrial kick layers with a cleaner, punchier 80s-style kick:
+   ```ruby
+   sample :bd_haus, amp: 2, rate: 1.0
+   ```
+   Does the track become more or less "Midnight Protocol"?
+
 ## Full Code
 
 The complete track code is available in `05_midnight_protocol.rb`.

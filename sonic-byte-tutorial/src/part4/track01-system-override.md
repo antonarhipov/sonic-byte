@@ -262,6 +262,30 @@ The `|i|` creates a counter (0, 1, 2, 3). Each iteration gets quieter, creating 
 4. **Structural contrast** — Break strips energy before peak
 5. **Clean outro** — Drums only for DJ mixing
 
+## Hacker Challenges
+
+Don't just read — **hack**. Try these modifications:
+
+1. **Half-Time Feel**: Change the drum pattern so the kick only hits on beats 1 and 3. How does the energy change? Does it feel heavier or lighter?
+
+2. **Randomize the Ghost Notes**: In the bassline, replace the fixed ghost note with randomness:
+   ```ruby
+   bass [:d2, :f2].choose, v*0.7, c-10
+   ```
+   Run it several times. Does it still groove?
+
+3. **Glitch the Break**: Wrap the break section in a bitcrusher:
+   ```ruby
+   with_fx :bitcrusher, bits: 8, sample_rate: 8000 do
+     # break code here
+   end
+   ```
+   Does the digital destruction fit the industrial aesthetic?
+
+4. **Extend the Hook**: Write a `hook3` that answers `hook` and `hook2`. What notes feel like a natural continuation?
+
+5. **Swap the Bass Synth**: Replace `:dsaw` with `:tb303`. Adjust the `cutoff` and add `res: 0.3`. Which version is more aggressive?
+
 ## Full Code
 
 The complete track code is available in `01_system_override.rb`.

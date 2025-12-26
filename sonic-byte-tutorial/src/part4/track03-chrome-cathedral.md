@@ -291,6 +291,32 @@ Chrome Cathedral uses 0.35-0.4 for a slightly hollow, retro sound.
 
 The title guides the sound design. Name your tracks evocatively.
 
+## Hacker Challenges
+
+1. **Drown It in Reverb**: Set reverb `room: 1.0` and `mix: 0.8`. At what point does atmosphere become mud? Find the threshold.
+
+2. **Generative Arpeggio**: Replace the fixed note array with:
+   ```ruby
+   8.times do
+     play scale(:a3, :minor_pentatonic).choose, amp: 0.22, release: 0.12
+     sleep 0.5
+   end
+   ```
+   Let the arpeggio write itself. Does it still feel intentional?
+
+3. **Add a Pad Chord Progression**: The track uses single pad chords. Try a simple progression:
+   ```ruby
+   [[:a2,:e3,:a3], [:f2,:c3,:f3], [:g2,:d3,:g3], [:a2,:e3,:a3]].each do |chord|
+     pad chord, 0.5
+     sleep 8
+   end
+   ```
+   Does movement help or hurt the hypnotic quality?
+
+4. **Speed It Up**: Change to 110 BPM. Does Chrome Cathedral still feel atmospheric, or does it become a different track entirely?
+
+5. **Kill the Reverb in the Drop**: After the ambient section, cut reverb to `room: 0.3`. Does the contrast make the return feel more powerful?
+
 ## Full Code
 
 The complete track code is available in `03_chrome_cathedral.rb`.

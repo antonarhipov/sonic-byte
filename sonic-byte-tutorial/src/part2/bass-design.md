@@ -1,6 +1,8 @@
 # Bass Design
 
-Bass is the foundation of dark electronic music. In this chapter, we'll build bass sounds that hit hard and drive the track forward.
+Bass is weight. Bass is darkness. Bass is the thing that makes people move without thinking about it.
+
+In a club, you don't just hear bass — you feel it in your ribs, in your teeth, in your bones. That physical impact is what we're building here.
 
 ## The Layering Philosophy
 

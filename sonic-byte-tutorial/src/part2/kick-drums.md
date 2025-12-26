@@ -1,6 +1,8 @@
 # Kick Drums That Hit Hard
 
-The kick drum is the foundation of dark electronic music. It provides the pulse that drives everything forward.
+The kick is the heartbeat. When it hits right, you feel it in your chest before you hear it. When it's wrong, nothing else matters — the track limps no matter how good everything else is.
+
+In dark electronic music, the kick needs to do two things: punch through the mix and move air. That's why we layer.
 
 ## The Basic Kick
 

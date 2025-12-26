@@ -40,6 +40,8 @@
   - [Writing Dark Melodies](part2/dark-melodies.md)
   - [Arpeggios](part2/arpeggios.md)
 
+- [Generative Patterns](part2/generative-patterns.md)
+
 # Part III: Arrangement
 
 - [Song Structure](part3/song-structure.md)
@@ -52,6 +54,8 @@
   - [Volume Automation](part3/volume.md)
   - [Filter Sweeps](part3/filter-sweeps.md)
   - [Using Effects for Energy](part3/effects-energy.md)
+
+- [Going Live](part3/live-performance.md)
 
 # Part IV: The Album
 
@@ -70,4 +74,5 @@
 - [Quick Reference](appendix/quick-reference.md)
 - [Synth Cheat Sheet](appendix/synth-cheatsheet.md)
 - [Scale Reference](appendix/scales.md)
+- [Troubleshooting](appendix/troubleshooting.md)
 - [Resources](appendix/resources.md)

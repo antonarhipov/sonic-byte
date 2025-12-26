@@ -301,6 +301,25 @@ The title guides everything:
 
 Name → Sound → Success.
 
+## Hacker Challenges
+
+1. **Design Your Own Hook**: The "skull" alarm is `mod_saw` with fast modulation. Create a completely different signature sound using `:mod_tri` or `:mod_pulse`. What makes a hook memorable?
+
+2. **Extend the Fake Drop**: Instead of 2 bars of silence, try 4. Does more tension = more impact, or does it lose momentum?
+
+3. **Pitch the Hook Down**: Transpose the skull sound down an octave (`:f3` instead of `:f4`). Does it become more menacing or just muddy?
+
+4. **Randomize the Stabs**: Instead of fixed timing:
+   ```ruby
+   4.times do
+     stab (0.7 + rand(0.3))
+     sleep [1, 1.5, 2].choose
+   end
+   ```
+   Does unpredictability add energy or chaos?
+
+5. **Layer a Scream**: Add a distorted, high-pitched synth layer during the peak. How much is too much? When does "aggressive" become "annoying"?
+
 ## Full Code
 
 The complete track code is available in `04_skull_fracture.rb`.

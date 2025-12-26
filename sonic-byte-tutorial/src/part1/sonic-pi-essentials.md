@@ -2,6 +2,8 @@
 
 This chapter covers the core Sonic Pi concepts used throughout the album. If you're familiar with Sonic Pi, skim for the patterns we use. If you're new, this is your foundation.
 
+> **Want to go deeper?** The [Sonic Pi built-in tutorial](https://sonic-pi.net/tutorial) is excellent and comprehensive. We'll cover what you need here, but the official docs go further.
+
 ## The Basics
 
 Sonic Pi is a live coding synthesizer. You write code, press Run, and hear music immediately.

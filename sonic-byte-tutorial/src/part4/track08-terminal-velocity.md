@@ -300,6 +300,18 @@ The track "falls" into darkness at maximum weight, then resolves.
 
 Same skeleton, different soul.
 
+## Hacker Challenges
+
+1. **Different Key**: The album starts and ends in D minor. Change Terminal Velocity to D *major*. Does the circular structure still work? Does it feel like resolution or betrayal?
+
+2. **Extended Fade**: Double the outro length with an even slower fade. Does it feel more cinematic or just drag?
+
+3. **Remove the Final Note**: Delete the held D4 at the end. Let it just... stop. Which ending is more powerful?
+
+4. **Add One More Element**: The descent strips elements away. What if you *added* something unexpected — a new sound heard only in the final minute?
+
+5. **Loop It**: Remove the outro entirely and make the main section loop seamlessly. If this track played forever, would it work? What makes an ending feel necessary?
+
 ## Full Code
 
 The complete track code is available in `08_terminal_velocity.rb`.

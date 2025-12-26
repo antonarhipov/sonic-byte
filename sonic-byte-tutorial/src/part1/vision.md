@@ -1,19 +1,23 @@
 # The Vision
 
-Before we write a single line of code, let's understand what we're creating.
+Before we write a single line of code, let's understand what we're creating — and why.
 
 ## Why Code Music?
 
-Traditional music production involves clicking, dragging, and tweaking knobs in a DAW (Digital Audio Workstation). It's visual, intuitive, and... sometimes tedious.
+In a DAW, you drag. You click. You twist virtual knobs that look like real knobs but don't feel like anything.
 
-Coding music is different:
+In code, you *describe*. You say what you want, and it happens.
 
-- **Precision** — Every note, every parameter is explicit
-- **Reproducibility** — Your code is your documentation
-- **Abstraction** — Build complex patterns from simple functions
-- **Experimentation** — Change one number, transform the entire track
+```ruby
+16.times do |i|
+  play :d2, cutoff: 50 + i*4
+  sleep 0.25
+end
+```
 
-When you write `sample :bd_tek, amp: 2.5, rate: 0.9`, you know exactly what's happening. There's no hidden automation, no mysterious settings. The code *is* the music.
+That's a bass note that gets brighter with each hit. Automatic filter sweep. No automation lanes. No clicking through menus. Just: *here's what I want*.
+
+This isn't better or worse than a DAW. It's different. It's thinking about music as **systems** instead of **events**. And once you think that way, you can build things that would be tedious or impossible otherwise.
 
 ## The Aesthetic
 

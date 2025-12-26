@@ -252,6 +252,25 @@ Core Meltdown succeeds because it balances:
 
 This is the album's emotional peak — everything we've built toward.
 
+## Hacker Challenges
+
+1. **Extend the Tension**: Double the tension section length. Does more anticipation = bigger payoff, or does it lose momentum?
+
+2. **Kill the Melody in the Drop**: Remove the ethereal melodies from the drop section entirely — just drums, bass, stabs. Is it more or less powerful?
+
+3. **Louder Hit**: Push the transition hit to `amp: 2.5`. At what point does impact become distortion? Find the edge.
+
+4. **Generative Melody**: Replace one melody with:
+   ```ruby
+   8.times do
+     lead scale(:g4, :minor).choose, 0.5, 0.7
+     sleep [0.5, 0.75, 1].choose
+   end
+   ```
+   Can generative melodies feel as emotional as composed ones?
+
+5. **Add a Riser Before Every Section**: Put a noise riser before each transition. Does it add energy or become predictable?
+
 ## Full Code
 
 The complete track code is available in `07_core_meltdown.rb`.

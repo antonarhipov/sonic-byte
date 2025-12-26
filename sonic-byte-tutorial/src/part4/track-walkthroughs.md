@@ -2,6 +2,8 @@
 
 Part IV examines each track in detail. You'll see how the concepts from Parts I-III come together in complete compositions.
 
+> 🎧 **[Listen to the album on SoundCloud](https://soundcloud.com/antonkeks/sets/sonic-byte)** while you read. Hearing the music makes everything click.
+
 ## How to Use This Section
 
 Each track walkthrough covers:
@@ -10,7 +12,7 @@ Each track walkthrough covers:
 2. **Sound Design** — The specific sounds and why they were chosen
 3. **Patterns** — Drum, bass, and melodic patterns
 4. **Arrangement** — Section-by-section breakdown
-5. **Key Techniques** — What makes this track unique
+5. **Hacker Challenges** — Modifications for you to try
 
 ## The Tracks
 

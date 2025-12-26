@@ -1,6 +1,10 @@
 # Builds and Drops
 
-The build-drop cycle is the heartbeat of electronic music. Master it and you control the dancefloor's energy.
+The build is a promise. The drop is keeping it.
+
+A good build makes the audience *need* the drop. They know it's coming. They're waiting for it. And when it finally hits, it's not just sound — it's release. All that tension, resolved in one moment.
+
+Get this wrong and people check their phones. Get it right and they throw their hands up.
 
 ## The Basic Cycle
 
