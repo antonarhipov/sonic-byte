@@ -2,6 +2,8 @@
 
 **8 tracks of Dark Clubbing / Industrial Electronic music composed in Sonic Pi**
 
+![Sonic Byte Album Art](sonic-byte.jpg)
+
 ---
 
 ### About
