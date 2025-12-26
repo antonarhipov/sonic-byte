@@ -22,10 +22,10 @@ jobs:
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: '0.4.37'
+          mdbook-version: latest
       - name: Check
         working-directory: sonic-byte-tutorial
-        run: mdbook check
+        run: mdbook test
 
   deploy:
     needs: check
@@ -38,7 +38,7 @@ jobs:
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: '0.4.37'
+          mdbook-version: latest
       - name: Build
         working-directory: sonic-byte-tutorial
         run: mdbook build
