@@ -1,0 +1,36 @@
+/* Print/PDF-only Table of Contents styling.
+   This is injected into all pages but only displayed on `print.html` by `pdf-toc.js`. */
+
+.pdf-toc {
+  /* Keep it visually separate from the rest of the book */
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--table-border-color, #d0d0d0);
+}
+
+/* Force the main content to start on a new page after the TOC in the PDF */
+@media print {
+  .pdf-toc {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
+/* Make TOC more compact for PDF */
+.pdf-toc ol.chapter {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.pdf-toc li.chapter-item {
+  margin: 0.15rem 0;
+}
+
+.pdf-toc a {
+  text-decoration: none;
+}
+
+/* Hide any numbering/aux UI that doesn't make sense in a PDF */
+.pdf-toc .chapter-number {
+  display: none;
+}
