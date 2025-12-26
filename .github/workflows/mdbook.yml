@@ -25,7 +25,7 @@ jobs:
           mdbook-version: '0.4.37'
       - name: Check
         working-directory: sonic-byte-tutorial
-        run: mdbook check
+        run: mdbook build
 
   deploy:
     needs: check
