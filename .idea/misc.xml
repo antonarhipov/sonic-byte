@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GHAISettings">{}</component>
+  <component name="JunieProjectTechnologies">
+    <option name="explicitlyDisabledTechs">
+      <set>
+        <option value="junie.js" />
+      </set>
+    </option>
+  </component>
+  <component name="Kotlin2JsCompilerArguments">
+    <option name="moduleKind" value="plain" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id>JVM languages</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectRootManager" version="2">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
