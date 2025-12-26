@@ -20,6 +20,7 @@ additional-css = ["src/pdf-toc.css"]
 [output.html.fold]
 enable = true
 level = 1
+optional = true
 
 [output.pdf]
 generate-document-outline = true
