@@ -1,0 +1,24 @@
+[book]
+authors = ["Anton Arhipov"]
+language = "en"
+#multilingual = false
+src = "src"
+title = "Synthetic Apocalypse: A Sonic Byte"
+description = "A guide to programming dark electronic music with Sonic Pi"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "coal"
+preferred-dark-theme = "coal"
+git-repository-url = "https://github.com/antonarhipov/sonic_protocols"
+edit-url-template = "https://github.com/antonarhipov/sonic_protocols/sonic-byte-tutorial/edit/main/{path}"
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.pdf]
+generate-document-outline = true
+
