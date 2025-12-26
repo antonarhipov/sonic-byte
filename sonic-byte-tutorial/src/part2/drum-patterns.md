@@ -20,7 +20,7 @@ end
 ```
 
 ### Visualized
-```
+```text
 Beat:   1       2       3       4
 Kick:   X       X       X       X
 Snare:          X               X

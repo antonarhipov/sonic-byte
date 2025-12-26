@@ -78,7 +78,7 @@ end
 ```
 
 **Pattern visualization:**
-```
+```text
 Beat:   1       2       3       4
 Kick:   X       X       X       X
 Snare:          X               X
@@ -110,7 +110,7 @@ end
 ```
 
 **Pattern:**
-```
+```text
 Beat:   1   .   2       3   .   4
 Kick:   X x     X       X x     X
         1 .75           1 .75

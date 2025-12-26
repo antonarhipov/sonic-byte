@@ -167,7 +167,7 @@ Descending then ascending — complements arp1.
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN A (48) → AMBIENT (24) → MAIN B (40) → OUTRO (32)
 ```
 

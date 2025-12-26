@@ -173,7 +173,7 @@ Without the quiet break, the peak would feel ordinary.
 
 ## Dynamic Curve Visualization
 
-```
+```text
 Energy
   │
   │           ┌─────┐

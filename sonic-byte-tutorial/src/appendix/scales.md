@@ -5,7 +5,7 @@ All tracks in *Sonic Byte* use minor keys for their dark character.
 ## Natural Minor Scales
 
 ### D Minor (Tracks 1 & 8)
-```
+```text
 D  E  F  G  A  Bb C  D
 1  2  b3 4  5  b6 b7 1
 ```
@@ -13,7 +13,7 @@ D  E  F  G  A  Bb C  D
 **Common melody notes:** D4, F4, G4, A4, C5, D5
 
 ### E Minor (Track 2)
-```
+```text
 E  F# G  A  B  C  D  E
 1  2  b3 4  5  b6 b7 1
 ```
@@ -21,7 +21,7 @@ E  F# G  A  B  C  D  E
 **Common melody notes:** E4, G4, A4, B4, D5
 
 ### A Minor (Track 3)
-```
+```text
 A  B  C  D  E  F  G  A
 1  2  b3 4  5  b6 b7 1
 ```
@@ -29,7 +29,7 @@ A  B  C  D  E  F  G  A
 **Common melody notes:** A4, C5, D5, E5, G5
 
 ### F Minor (Track 4)
-```
+```text
 F  G  Ab Bb C  Db Eb F
 1  2  b3 4  5  b6 b7 1
 ```
@@ -37,7 +37,7 @@ F  G  Ab Bb C  Db Eb F
 **Common melody notes:** F4, Ab4, Bb4, C5, Eb5
 
 ### C Minor (Track 5)
-```
+```text
 C  D  Eb F  G  Ab Bb C
 1  2  b3 4  5  b6 b7 1
 ```
@@ -45,7 +45,7 @@ C  D  Eb F  G  Ab Bb C
 **Common melody notes:** C4, Eb4, F4, G4, Bb4, C5
 
 ### B Minor (Track 6)
-```
+```text
 B  C# D  E  F# G  A  B
 1  2  b3 4  5  b6 b7 1
 ```
@@ -53,7 +53,7 @@ B  C# D  E  F# G  A  B
 **Common melody notes:** B4, D5, E5, F#5
 
 ### G Minor (Track 7)
-```
+```text
 G  A  Bb C  D  Eb F  G
 1  2  b3 4  5  b6 b7 1
 ```

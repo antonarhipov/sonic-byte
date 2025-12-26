@@ -181,7 +181,7 @@ The hook appears, disappears, reappears — creating anticipation.
 
 ## Arrangement
 
-```
+```text
 INTRO (24) → BUILDUP (24) → MAIN (40) → FAKE DROP (8) → PEAK (40) → OUTRO (16)
 ```
 
@@ -261,7 +261,7 @@ Design sounds that are:
 
 Subvert expectations:
 
-```
+```text
 Expected: MAIN → OUTRO
 Actual:   MAIN → SILENCE → BIGGEST HIT → PEAK → OUTRO
 ```

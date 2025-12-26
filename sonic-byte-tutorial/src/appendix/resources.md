@@ -88,7 +88,7 @@ Further learning and inspiration.
 
 ### GitHub Repository
 The complete code for *Sonic Byte* is available at:
-```
+```text
 github.com/antonarhipov/sonic-byte
 ```
 

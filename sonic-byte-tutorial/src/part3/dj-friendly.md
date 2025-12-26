@@ -162,7 +162,7 @@ hit 1.2
 
 ## Standard DJ-Friendly Structure
 
-```
+```text
 INTRO     8 bars   Drums only, filtered bass
 BUILD     8 bars   Add elements, filter opens
 MAIN A   12 bars   Full groove

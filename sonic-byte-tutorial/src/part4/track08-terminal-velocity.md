@@ -154,7 +154,7 @@ Similar to Track 1, but slightly heavier (amp: 2.3 vs 2.2).
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN (48) → PEAK (48) → DESCENT (24) → OUTRO (32)
 ```
 
@@ -225,7 +225,7 @@ sleep 32
 
 Starting and ending in D Minor creates closure:
 
-```
+```text
 Track 1: D Minor → [journey through 6 other keys] → Track 8: D Minor
 ```
 

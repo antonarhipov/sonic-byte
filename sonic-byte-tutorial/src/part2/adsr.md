@@ -10,7 +10,7 @@ ADSR stands for:
 - **S**ustain — The level held while the note plays
 - **R**elease — How quickly it fades after the note ends
 
-```
+```text
 Volume
   │    ┌──────┐
   │   /│      │\

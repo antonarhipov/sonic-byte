@@ -125,7 +125,7 @@ end
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN A (48) → TENSION (24) → DROP (56) → OUTRO (24)
 ```
 

@@ -8,7 +8,7 @@ Get this wrong and people check their phones. Get it right and they throw their 
 
 ## The Basic Cycle
 
-```
+```text
 LOW ENERGY → BUILD → TENSION → DROP → HIGH ENERGY
 ```
 

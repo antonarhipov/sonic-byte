@@ -148,7 +148,7 @@ Two complementary phrases that play call-and-response.
 
 ## Arrangement
 
-```
+```text
 INTRO    | 8 bars  | Kicks only, then hats
 BUILD    | 8 bars  | Add snares, bass enters low-passed
 MAIN A   | 12 bars | Full groove, hooks enter

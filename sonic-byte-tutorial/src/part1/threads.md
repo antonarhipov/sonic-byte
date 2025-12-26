@@ -65,7 +65,7 @@ puts "Main continues immediately"
 ```
 
 Output:
-```
+```text
 Main continues immediately
 Thread 1 starts
 Thread 2 starts
@@ -125,7 +125,7 @@ The main function must "take time" equal to the pattern length.
 
 ## Visualizing Threads
 
-```
+```text
 Time:  1       2       3       4       
        |       |       |       |
 Kick:  X       X       X       X

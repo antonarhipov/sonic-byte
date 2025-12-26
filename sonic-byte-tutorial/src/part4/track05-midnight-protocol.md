@@ -192,7 +192,7 @@ Higher register — plays call-and-response with arp1.
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN A (48) → BREAK (16) → MAIN B (48) → OUTRO (32)
 ```
 

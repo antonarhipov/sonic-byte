@@ -146,7 +146,7 @@ The riff plays twice, pauses, then once more — creating rhythmic interest.
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN A (48) → BREAK (16) → MAIN B (48) → OUTRO (24)
 ```
 

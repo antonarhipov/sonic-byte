@@ -183,7 +183,7 @@ end
 
 ## Arrangement
 
-```
+```text
 INTRO (32) → BUILD (32) → MAIN A (48) → DARK (24) → MAIN B (48) → OUTRO (28)
 ```
 

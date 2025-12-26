@@ -167,7 +167,7 @@ Listen for:
 
 ## Decision Framework
 
-```
+```text
 Need bass?
 ├── Aggressive → :tb303
 ├── Warm → :prophet

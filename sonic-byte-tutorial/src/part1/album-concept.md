@@ -12,7 +12,7 @@ The name is a programming pun, but it's also practical: 8 tracks is enough to de
 
 Albums work best when they take listeners somewhere. Here's the energy map of *Sonic Byte*:
 
-```
+```text
 Energy
   ▲
   │      ┌───┐         ┌─────┐
@@ -82,7 +82,7 @@ We end where we began — 100 BPM, D Minor. But now the context has changed. The
 
 The tracks are connected by key signatures:
 
-```
+```text
 D Minor (1, 8) ─── A Minor (3) ─── E Minor (2)
     │                   │
     └─── G Minor (7) ───┤
@@ -94,7 +94,7 @@ Related keys share notes, making transitions feel natural even when tracks are p
 
 ## BPM Flow
 
-```
+```text
 Track:  1    2    3    4    5    6    7    8
 BPM:   100  105   98  108  102   95  106  100
        ───  ↑↑   ↓↓   ↑↑   ↓    ↓↓   ↑↑   ↓

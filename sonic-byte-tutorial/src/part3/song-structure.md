@@ -6,7 +6,7 @@ A track isn't just sounds — it's a journey. Structure transforms loops into mu
 
 Most tracks in *Sonic Byte* follow this structure:
 
-```
+```text
 INTRO → BUILD → MAIN A → BREAK → MAIN B/PEAK → OUTRO
 ```
 
@@ -191,7 +191,7 @@ sleep 24
 
 Visualize energy levels:
 
-```
+```text
 Section:  INTRO   BUILD   MAIN A   BREAK   PEAK    OUTRO
 Energy:   ▂▂▂▃    ▃▄▅▅    ▆▆▆▆▆    ▂▂▃▅    ▇▇▇▇▇   ▅▄▃▂▁
 Bars:     8       8       12       4-6     12-14   6
@@ -259,7 +259,7 @@ drums 1.2, 1.1, 0.85
 
 ### Aggressive Track (Skull Fracture)
 
-```
+```text
 INTRO(6) → BUILD(8) → MAIN(12) → FAKE DROP(2) → PEAK(14) → OUTRO(6)
 ```
 
@@ -267,7 +267,7 @@ The "fake drop" is a brief silence before the real peak.
 
 ### Atmospheric Track (Chrome Cathedral)
 
-```
+```text
 INTRO(8) → BUILD(10) → MAIN A(12) → BREAK(8) → MAIN B(12) → LONG OUTRO(8)
 ```
 
@@ -275,7 +275,7 @@ Longer transitions, more breathing room.
 
 ### Climax Track (Core Meltdown)
 
-```
+```text
 INTRO(8) → BUILD(8) → MAIN A(12) → TENSION(6) → MASSIVE DROP(14) → OUTRO(6)
 ```
 
