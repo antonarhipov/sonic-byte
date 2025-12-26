@@ -2,6 +2,9 @@
 
 **8 tracks of Dark Clubbing / Industrial Electronic music composed in Sonic Pi**
 
+Listen to the full album at [SoundCloud](https://soundcloud.com/anton-arhipov-tln/sets/sonic-bytes)
+
+
 ![Sonic Byte Album Art](sonic-byte.jpg)
 
 ---
