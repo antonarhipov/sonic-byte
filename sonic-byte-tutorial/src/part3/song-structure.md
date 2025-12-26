@@ -4,7 +4,7 @@ A track isn't just sounds — it's a journey. Structure transforms loops into mu
 
 ## The Standard Sections
 
-Most tracks in *Synthetic Apocalypse* follow this structure:
+Most tracks in *Sonic Byte* follow this structure:
 
 ```
 INTRO → BUILD → MAIN A → BREAK → MAIN B/PEAK → OUTRO

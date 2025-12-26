@@ -1,6 +1,6 @@
 # The Album Concept
 
-*Synthetic Apocalypse* isn't just 8 random tracks — it's a designed journey. Understanding this structure will help you create cohesive albums yourself.
+*Sonic Byte* isn't just 8 random tracks — it's a designed journey. Understanding this structure will help you create cohesive albums yourself.
 
 ## The "Sonic Byte" Concept
 
@@ -10,7 +10,7 @@ The name is a programming pun, but it's also practical: 8 tracks is enough to de
 
 ## The Energy Arc
 
-Albums work best when they take listeners somewhere. Here's the energy map of *Synthetic Apocalypse*:
+Albums work best when they take listeners somewhere. Here's the energy map of *Sonic Byte*:
 
 ```
 Energy

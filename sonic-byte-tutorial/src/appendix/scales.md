@@ -1,6 +1,6 @@
 # Scale Reference
 
-All tracks in *Synthetic Apocalypse* use minor keys for their dark character.
+All tracks in *Sonic Byte* use minor keys for their dark character.
 
 ## Natural Minor Scales
 

@@ -1,5 +1,4 @@
-# SYNTHETIC APOCALYPSE
-## A Sonic Byte
+# A Sonic Byte
 
 **8 tracks of Dark Clubbing / Industrial Electronic music composed in Sonic Pi**
 
@@ -7,7 +6,7 @@
 
 ### About
 
-*Synthetic Apocalypse* is an 8-track album (a "Sonic Byte") created entirely in [Sonic Pi](https://sonic-pi.net/), a live coding music synthesizer. The album explores dark clubbing, industrial electronic, and darksynth territories, drawing inspiration from artists like **Irving Force**, **Noisecream**, **Gesaffelstein**, **1788-L**, and **REZZ**.
+*Sonic Byte* is an 8-track album created entirely in [Sonic Pi](https://sonic-pi.net/), a live coding music synthesizer. The album explores dark clubbing, industrial electronic, and darksynth territories, drawing inspiration from artists like **Irving Force**, **Noisecream**, **Gesaffelstein**, **1788-L**, and **REZZ**.
 
 Each track is a standalone `.rb` file that can be run directly in Sonic Pi.
 

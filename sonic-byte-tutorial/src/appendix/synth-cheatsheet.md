@@ -1,6 +1,6 @@
 # Synth Cheat Sheet
 
-Quick reference for synths used in *Synthetic Apocalypse*.
+Quick reference for synths used in *Sonic Byte*.
 
 ## Primary Synths
 

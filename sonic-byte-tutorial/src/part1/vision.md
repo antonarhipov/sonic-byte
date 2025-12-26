@@ -17,7 +17,7 @@ When you write `sample :bd_tek, amp: 2.5, rate: 0.9`, you know exactly what's ha
 
 ## The Aesthetic
 
-**Synthetic Apocalypse** draws from several dark electronic genres:
+**Sonic Byte** draws from several dark electronic genres:
 
 - **Dark Clubbing** — Heavy, driving beats designed for the dancefloor
 - **Darksynth** — 80s-inspired synths with a modern, aggressive edge
@@ -65,7 +65,7 @@ The most powerful drops happen after you **remove** elements:
 
 ## What Makes This Album Work
 
-Each track in Synthetic Apocalypse serves a purpose:
+Each track in Sonic Byte serves a purpose:
 
 1. **System Override** — Establishes the sound, aggressive opener
 2. **Nerve Damage** — Pushes aggression further with industrial textures

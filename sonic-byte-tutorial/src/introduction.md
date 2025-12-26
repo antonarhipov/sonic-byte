@@ -1,4 +1,4 @@
-# Synthetic Apocalypse: A Sonic Byte
+# A Sonic Byte
 
 > *A guide to programming dark electronic music with Sonic Pi*
 
@@ -8,7 +8,7 @@
 
 You're holding a tutorial that will teach you how to create a complete 8-track dark electronic album using nothing but code. No DAW. No piano roll. No mouse clicking. Just pure, expressive code.
 
-**Synthetic Apocalypse** is a "Sonic Byte" — 8 tracks of dark clubbing, industrial electronic, and darksynth music, composed entirely in [Sonic Pi](https://sonic-pi.net/). This book will teach you how it was made, and give you the skills to create your own.
+**Sonic Byte** — 8 tracks of dark clubbing, industrial electronic, and darksynth music, composed entirely in [Sonic Pi](https://sonic-pi.net/). This book will teach you how it was made, and give you the skills to create your own.
 
 ## What You'll Learn
 

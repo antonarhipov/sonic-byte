@@ -87,9 +87,9 @@ Further learning and inspiration.
 ## This Album
 
 ### GitHub Repository
-The complete code for *Synthetic Apocalypse* is available at:
+The complete code for *Sonic Byte* is available at:
 ```
-github.com/antonarhipov/sonic-protocols/sonic-byte-tutorial
+github.com/antonarhipov/sonic-byte
 ```
 
 ### Files

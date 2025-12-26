@@ -1,5 +1,5 @@
 # TRACK 1: SYSTEM OVERRIDE | 100 BPM | D Minor | ~2:30
-# Album: Synthetic Apocalypse
+# Album: Sonic Byte
 use_bpm 100
 
 # Core sounds

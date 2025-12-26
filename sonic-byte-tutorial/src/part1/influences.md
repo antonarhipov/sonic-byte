@@ -1,6 +1,6 @@
 # Our Influences
 
-Every piece of music builds on what came before. Here are the artists who shaped the sound of *Synthetic Apocalypse*, and what we learned from each.
+Every piece of music builds on what came before. Here are the artists who shaped the sound of *Sonic Byte*, and what we learned from each.
 
 ## Irving Force
 
@@ -133,7 +133,7 @@ end
 
 ## Synthesis: Our Sound
 
-By studying these artists, we developed principles for *Synthetic Apocalypse*:
+By studying these artists, we developed principles for *Sonic Byte*:
 
 | Principle | Source |
 |-----------|--------|

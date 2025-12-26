@@ -4,7 +4,7 @@ Part II focuses on crafting the individual elements of dark electronic music. We
 
 ## The Sound Palette
 
-Every track in *Synthetic Apocalypse* uses a consistent palette:
+Every track in *Sonic Byte* uses a consistent palette:
 
 ### Drums
 - **Kick**: Layered samples (`bd_tek` + `bd_boom` or `bd_zum`)
