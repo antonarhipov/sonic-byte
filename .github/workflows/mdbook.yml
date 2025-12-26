@@ -1,0 +1,51 @@
+name: mdBook
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'sonic-byte-tutorial/**'
+      - '.github/workflows/mdbook.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'sonic-byte-tutorial/**'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+      - name: Check
+        working-directory: sonic-byte-tutorial
+        run: mdbook check
+
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+      - name: Build
+        working-directory: sonic-byte-tutorial
+        run: mdbook build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./sonic-byte-tutorial/book/html
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
