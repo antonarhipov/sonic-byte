@@ -2,7 +2,7 @@
 
 Part IV examines each track in detail. You'll see how the concepts from Parts I-III come together in complete compositions.
 
-> 🎧 **[Listen to the album on SoundCloud](https://soundcloud.com/antonkeks/sets/sonic-byte)** while you read. Hearing the music makes everything click.
+> 🎧 **[Listen to the album on SoundCloud](https://soundcloud.com/anton-arhipov-tln/sets/sonic-bytes)** while you read. Hearing the music makes everything click.
 
 ## How to Use This Section
 
