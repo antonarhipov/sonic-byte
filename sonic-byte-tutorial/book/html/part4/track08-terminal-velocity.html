@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html lang="en" class="coal" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>08: Terminal Velocity - The Sonic Byte</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A guide to programming dark electronic music with Sonic Pi">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "coal" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Part I: Foundations</li><li class="chapter-item expanded "><a href="../part1/vision.html"><strong aria-hidden="true">1.</strong> The Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/dark-clubbing.html"><strong aria-hidden="true">1.1.</strong> What is Dark Clubbing?</a></li><li class="chapter-item "><a href="../part1/influences.html"><strong aria-hidden="true">1.2.</strong> Our Influences</a></li><li class="chapter-item "><a href="../part1/album-concept.html"><strong aria-hidden="true">1.3.</strong> The Album Concept</a></li></ol></li><li class="chapter-item expanded "><a href="../part1/sonic-pi-essentials.html"><strong aria-hidden="true">2.</strong> Sonic Pi Essentials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/playing-sounds.html"><strong aria-hidden="true">2.1.</strong> Playing Sounds</a></li><li class="chapter-item "><a href="../part1/timing-and-sleep.html"><strong aria-hidden="true">2.2.</strong> Timing and Sleep</a></li><li class="chapter-item "><a href="../part1/variables-and-functions.html"><strong aria-hidden="true">2.3.</strong> Variables and Functions</a></li><li class="chapter-item "><a href="../part1/threads.html"><strong aria-hidden="true">2.4.</strong> Threads and Concurrency</a></li><li class="chapter-item "><a href="../part1/effects.html"><strong aria-hidden="true">2.5.</strong> Effects (FX)</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Part II: Sound Design</li><li class="chapter-item expanded "><a href="../part2/building-sounds.html"><strong aria-hidden="true">3.</strong> Building Sounds</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/choosing-synths.html"><strong aria-hidden="true">3.1.</strong> Choosing Synths</a></li><li class="chapter-item "><a href="../part2/layering.html"><strong aria-hidden="true">3.2.</strong> Layering Techniques</a></li><li class="chapter-item "><a href="../part2/adsr.html"><strong aria-hidden="true">3.3.</strong> The ADSR Envelope</a></li><li class="chapter-item "><a href="../part2/filters.html"><strong aria-hidden="true">3.4.</strong> Filters and Cutoff</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/drums.html"><strong aria-hidden="true">4.</strong> Drum Programming</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/kick-drums.html"><strong aria-hidden="true">4.1.</strong> Kick Drums That Hit Hard</a></li><li class="chapter-item "><a href="../part2/snares.html"><strong aria-hidden="true">4.2.</strong> Snares and Claps</a></li><li class="chapter-item "><a href="../part2/hihats.html"><strong aria-hidden="true">4.3.</strong> Hi-Hats and Percussion</a></li><li class="chapter-item "><a href="../part2/drum-patterns.html"><strong aria-hidden="true">4.4.</strong> Building Drum Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/bass-design.html"><strong aria-hidden="true">5.</strong> Bass Design</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/tb303.html"><strong aria-hidden="true">5.1.</strong> The TB303 Sound</a></li><li class="chapter-item "><a href="../part2/bass-layering.html"><strong aria-hidden="true">5.2.</strong> Layering Bass</a></li><li class="chapter-item "><a href="../part2/bass-patterns.html"><strong aria-hidden="true">5.3.</strong> Writing Bass Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/leads-and-melodies.html"><strong aria-hidden="true">6.</strong> Leads and Melodies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/lead-synths.html"><strong aria-hidden="true">6.1.</strong> Synth Selection for Leads</a></li><li class="chapter-item "><a href="../part2/dark-melodies.html"><strong aria-hidden="true">6.2.</strong> Writing Dark Melodies</a></li><li class="chapter-item "><a href="../part2/arpeggios.html"><strong aria-hidden="true">6.3.</strong> Arpeggios</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/generative-patterns.html"><strong aria-hidden="true">7.</strong> Generative Patterns</a></li><li class="chapter-item expanded affix "><li class="part-title">Part III: Arrangement</li><li class="chapter-item expanded "><a href="../part3/song-structure.html"><strong aria-hidden="true">8.</strong> Song Structure</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/intro-outro.html"><strong aria-hidden="true">8.1.</strong> Intro and Outro</a></li><li class="chapter-item "><a href="../part3/builds-drops.html"><strong aria-hidden="true">8.2.</strong> Builds and Drops</a></li><li class="chapter-item "><a href="../part3/tension-release.html"><strong aria-hidden="true">8.3.</strong> Tension and Release</a></li><li class="chapter-item "><a href="../part3/dj-friendly.html"><strong aria-hidden="true">8.4.</strong> DJ-Friendly Arrangements</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/dynamics.html"><strong aria-hidden="true">9.</strong> Dynamics and Energy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/volume.html"><strong aria-hidden="true">9.1.</strong> Volume Automation</a></li><li class="chapter-item "><a href="../part3/filter-sweeps.html"><strong aria-hidden="true">9.2.</strong> Filter Sweeps</a></li><li class="chapter-item "><a href="../part3/effects-energy.html"><strong aria-hidden="true">9.3.</strong> Using Effects for Energy</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/live-performance.html"><strong aria-hidden="true">10.</strong> Going Live</a></li><li class="chapter-item expanded affix "><li class="part-title">Part IV: The Album</li><li class="chapter-item expanded "><a href="../part4/track-walkthroughs.html"><strong aria-hidden="true">11.</strong> Track Walkthroughs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part4/track01-system-override.html"><strong aria-hidden="true">11.1.</strong> 01: System Override</a></li><li class="chapter-item "><a href="../part4/track02-nerve-damage.html"><strong aria-hidden="true">11.2.</strong> 02: Nerve Damage</a></li><li class="chapter-item "><a href="../part4/track03-chrome-cathedral.html"><strong aria-hidden="true">11.3.</strong> 03: Chrome Cathedral</a></li><li class="chapter-item "><a href="../part4/track04-skull-fracture.html"><strong aria-hidden="true">11.4.</strong> 04: Skull Fracture</a></li><li class="chapter-item "><a href="../part4/track05-midnight-protocol.html"><strong aria-hidden="true">11.5.</strong> 05: Midnight Protocol</a></li><li class="chapter-item "><a href="../part4/track06-void-walker.html"><strong aria-hidden="true">11.6.</strong> 06: Void Walker</a></li><li class="chapter-item "><a href="../part4/track07-core-meltdown.html"><strong aria-hidden="true">11.7.</strong> 07: Core Meltdown</a></li><li class="chapter-item expanded "><a href="../part4/track08-terminal-velocity.html" class="active"><strong aria-hidden="true">11.8.</strong> 08: Terminal Velocity</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../appendix/quick-reference.html"><strong aria-hidden="true">12.</strong> Quick Reference</a></li><li class="chapter-item expanded "><a href="../appendix/synth-cheatsheet.html"><strong aria-hidden="true">13.</strong> Synth Cheat Sheet</a></li><li class="chapter-item expanded "><a href="../appendix/scales.html"><strong aria-hidden="true">14.</strong> Scale Reference</a></li><li class="chapter-item expanded "><a href="../appendix/troubleshooting.html"><strong aria-hidden="true">15.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../appendix/resources.html"><strong aria-hidden="true">16.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Sonic Byte</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte/sonic-byte-tutorial/edit/main/src/part4/track08-terminal-velocity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="08-terminal-velocity"><a class="header" href="#08-terminal-velocity">08: Terminal Velocity</a></h1>
+<p><strong>BPM:</strong> 100 | <strong>Key:</strong> D Minor | <strong>Duration:</strong> ~3:15</p>
+<p>Cinematic finale. Terminal Velocity returns to where we began — 100 BPM, D Minor — but now with the weight of the entire journey behind it.</p>
+<h2 id="the-vision"><a class="header" href="#the-vision">The Vision</a></h2>
+<p>The final track must:</p>
+<ol>
+<li><strong>Return home</strong> — Same key and tempo as Track 1</li>
+<li><strong>Feel like resolution</strong> — The journey's end</li>
+<li><strong>Cinematic scope</strong> — Bigger, more emotional than Track 1</li>
+<li><strong>Fade into darkness</strong> — End the album definitively</li>
+</ol>
+<h2 id="what-makes-it-unique"><a class="header" href="#what-makes-it-unique">What Makes It Unique</a></h2>
+<h3 id="circular-structure"><a class="header" href="#circular-structure">Circular Structure</a></h3>
+<p>Track 1 and Track 8 share:</p>
+<ul>
+<li><strong>100 BPM</strong></li>
+<li><strong>D Minor</strong></li>
+</ul>
+<p>But Track 8 sounds different because:</p>
+<ul>
+<li>We've heard 7 tracks of development</li>
+<li>The melodies are more emotional</li>
+<li>The arrangement is more cinematic</li>
+<li>The ending fades rather than loops</li>
+</ul>
+<h3 id="noisecream-inspired-intensity"><a class="header" href="#noisecream-inspired-intensity">Noisecream-Inspired Intensity</a></h3>
+<p>Driving, intense, but <strong>not happy</strong>:</p>
+<pre><code class="language-ruby">define :bass do |n, v=1, c=78|
+  use_synth :tb303
+  play n, amp: 0.75*v, attack: 0.01, decay: 0.18,
+       sustain: 0.1, release: 0.15, cutoff: c, res: 0.32, wave: 0
+  use_synth :dsaw
+  play n, amp: 0.45*v, attack: 0.01, decay: 0.15,
+       release: 0.12, cutoff: c-8, detune: 0.18
+  use_synth :sine
+  play n-12, amp: 1.15*v, attack: 0.01, sustain: 0.25, release: 0.2
+end
+</code></pre>
+<p><strong>TB303 + dsaw + sine</strong> — the full aggressive stack returns.</p>
+<h3 id="power-stabs"><a class="header" href="#power-stabs">Power Stabs</a></h3>
+<p>D minor chord stabs for emphasis:</p>
+<pre><code class="language-ruby">define :stab do |v=1|
+  use_synth :dsaw
+  play [:d2, :a2, :d3], amp: 0.55*v, attack: 0,
+       decay: 0.2, release: 0.15, cutoff: 88, detune: 0.22
+end
+</code></pre>
+<h3 id="tight-melodic-lines"><a class="header" href="#tight-melodic-lines">Tight Melodic Lines</a></h3>
+<p>Fast, rhythmic melodies (learned from Noisecream — we wanted "intense"):</p>
+<pre><code class="language-ruby">define :lead do |n, dur=0.25, v=1|
+  use_synth :prophet
+  play n, amp: 0.4*v, attack: 0.03, decay: dur*0.3,
+       sustain: dur*0.4, release: dur*0.5, cutoff: 92
+end
+</code></pre>
+<p><strong>Fast attack (0.03)</strong> and <strong>short default duration (0.25)</strong> for rhythmic precision.</p>
+<h3 id="the-melodies"><a class="header" href="#the-melodies">The Melodies</a></h3>
+<p>Three phrases designed to be tight and driving:</p>
+<pre><code class="language-ruby">define :mel1 do |v=1|  # Driving, tense
+  lead :d4, 0.5, v; sleep 0.5
+  lead :f4, 0.5, v*0.95; sleep 0.5
+  lead :a4, 0.5, v; sleep 0.5
+  lead :g4, 0.5, v*0.9; sleep 0.5
+  lead :f4, 0.5, v*0.85; sleep 0.5
+  lead :d4, 0.5, v; sleep 0.5
+  lead :e4, 0.5, v*0.9; sleep 0.5  # E creates tension
+  sleep 0.5
+end
+
+define :mel2 do |v=1|  # Dark with Bb
+  lead :a4, 0.5, v; sleep 0.5
+  lead :bb4, 0.5, v*0.95; sleep 0.5  # Bb = darkness
+  lead :a4, 0.5, v*0.9; sleep 0.5
+  lead :g4, 0.5, v*0.85; sleep 0.5
+  lead :f4, 0.5, v*0.9; sleep 0.5
+  lead :e4, 0.5, v*0.8; sleep 0.5
+  lead :d4, 1, v; sleep 1
+end
+
+define :mel3 do |v=1|  # Descending resolution
+  lead :d5, 0.5, v; sleep 0.5
+  lead :c5, 0.5, v*0.95; sleep 0.5
+  lead :bb4, 0.5, v*0.9; sleep 0.5
+  lead :a4, 0.5, v*0.85; sleep 0.5
+  lead :g4, 0.5, v*0.9; sleep 0.5
+  lead :a4, 0.5, v*0.8; sleep 0.5
+  lead :d4, 1, v; sleep 1
+end
+</code></pre>
+<p><strong>All notes on 0.5 beat grid</strong> — rhythmically tight, no rubato.</p>
+<h2 id="sound-design"><a class="header" href="#sound-design">Sound Design</a></h2>
+<h3 id="drums-driving-but-clean"><a class="header" href="#drums-driving-but-clean">Drums (Driving but Clean)</a></h3>
+<pre><code class="language-ruby">define :drums do |k=1, s=1, h=1|
+  in_thread do
+    kick k; sleep 0.75
+    kick k*0.65; sleep 0.25
+    kick k*0.85; sleep 1
+    kick k; sleep 0.75
+    kick k*0.7; sleep 0.25
+    kick k*0.9; sleep 1
+  end
+  in_thread do
+    sleep 1; snare s; sleep 1; snare s*0.95; sleep 2
+  end
+  in_thread do
+    8.times { hat h; sleep 0.5 }
+  end
+  sleep 4
+end
+</code></pre>
+<p>Syncopated kicks create groove without double-time aggression.</p>
+<h3 id="kick-and-snare"><a class="header" href="#kick-and-snare">Kick and Snare</a></h3>
+<pre><code class="language-ruby">define :kick do |v=1|
+  sample :bd_tek, amp: 2.3*v, rate: 0.9
+  sample :bd_boom, amp: 0.55*v, rate: 1.15
+end
+
+define :snare do |v=1|
+  sample :sn_dub, amp: v, rate: 0.82
+end
+</code></pre>
+<p>Similar to Track 1, but slightly heavier (amp: 2.3 vs 2.2).</p>
+<h2 id="arrangement"><a class="header" href="#arrangement">Arrangement</a></h2>
+<pre><code>INTRO (32) → BUILD (32) → MAIN (48) → PEAK (48) → DESCENT (24) → OUTRO (32)
+</code></pre>
+<h3 id="the-descent-section"><a class="header" href="#the-descent-section">The "Descent" Section</a></h3>
+<p>Unique to the finale — a gradual descent before the outro:</p>
+<pre><code class="language-ruby"># DESCENT: 6 bars - drums fading
+in_thread do
+  6.times do |i|
+    drums (1-i*0.1), (0.9-i*0.08), (0.7-i*0.06)
+  end
+end
+
+in_thread do
+  with_fx :reverb, room: 0.75, mix: 0.45 do
+    3.times { mel3 0.7; mel2 0.65 }
+  end
+end
+
+in_thread do
+  with_fx :lpf, cutoff: 85, cutoff_slide: 24 do |fx|
+    control fx, cutoff: 55  # Filter closing
+    6.times { bassline 0.85, 78 }
+  end
+end
+
+sleep 24
+</code></pre>
+<p><strong>Key elements:</strong></p>
+<ul>
+<li>Drums fade 10% per bar</li>
+<li>Bass filter closes (85→55)</li>
+<li>Melody continues but feeling more distant</li>
+</ul>
+<h3 id="the-outro"><a class="header" href="#the-outro">The Outro</a></h3>
+<p>A definitive ending:</p>
+<pre><code class="language-ruby"># OUTRO: 8 bars - fading into darkness
+in_thread do
+  4.times do |i|
+    drums (0.6-i*0.12), 0, (0.45-i*0.08)
+  end
+  # Last 4 bars: no drums
+end
+
+in_thread do
+  with_fx :reverb, room: 0.95, mix: 0.65 do
+    with_fx :echo, phase: 1, decay: 10, mix: 0.55 do
+      mel3 0.45; sleep 4
+      mel2 0.35; sleep 4
+      lead :d4, 4, 0.3  # Final note: root, long, quiet
+    end
+  end
+end
+
+sleep 32
+</code></pre>
+<p><strong>The final note:</strong> D4, held for 4 beats, fading into reverb. The album ends on its home note.</p>
+<h2 id="key-techniques"><a class="header" href="#key-techniques">Key Techniques</a></h2>
+<h3 id="1-circular-key-structure"><a class="header" href="#1-circular-key-structure">1. Circular Key Structure</a></h3>
+<p>Starting and ending in D Minor creates closure:</p>
+<pre><code>Track 1: D Minor → [journey through 6 other keys] → Track 8: D Minor
+</code></pre>
+<p>The return feels like resolution, not repetition.</p>
+<h3 id="2-tight-rhythmic-melodies"><a class="header" href="#2-tight-rhythmic-melodies">2. Tight Rhythmic Melodies</a></h3>
+<p>All melody notes on the 0.5-beat grid:</p>
+<pre><code class="language-ruby">lead :d4, 0.5; sleep 0.5  # Half beat
+lead :f4, 0.5; sleep 0.5  # Half beat
+</code></pre>
+<p>No 0.75 or 0.25 — keeps it driving and rhythmic.</p>
+<p>This was a deliberate correction from earlier versions that felt "out of rhythm."</p>
+<h3 id="3-the-descent-arc"><a class="header" href="#3-the-descent-arc">3. The Descent Arc</a></h3>
+<p>Most tracks go: MAIN → BREAK → PEAK → OUTRO</p>
+<p>Terminal Velocity goes: MAIN → PEAK → <strong>DESCENT</strong> → OUTRO</p>
+<p>The descent gives listeners time to process before the end.</p>
+<h3 id="4-filter-closing"><a class="header" href="#4-filter-closing">4. Filter Closing</a></h3>
+<p>Opening filters = building energy.
+<strong>Closing filters = releasing energy:</strong></p>
+<pre><code class="language-ruby">with_fx :lpf, cutoff: 85, cutoff_slide: 24 do |fx|
+  control fx, cutoff: 55  # Slides DOWN
+  # ...
+end
+</code></pre>
+<p>The closing filter signals "this is ending."</p>
+<h3 id="5-the-final-note"><a class="header" href="#5-the-final-note">5. The Final Note</a></h3>
+<p>End on the root note, held long:</p>
+<pre><code class="language-ruby">lead :d4, 4, 0.3  # Root (D), 4 beats, quiet
+</code></pre>
+<p>This provides definitive closure. The album doesn't just stop — it resolves.</p>
+<h2 id="the-terminal-velocity-concept"><a class="header" href="#the-terminal-velocity-concept">The Terminal Velocity Concept</a></h2>
+<p>The title works on multiple levels:</p>
+<ul>
+<li><strong>Physics:</strong> Terminal velocity = maximum falling speed</li>
+<li><strong>Finale:</strong> Terminal = final, ending</li>
+<li><strong>Velocity:</strong> Speed, momentum from the whole album</li>
+</ul>
+<p>The track "falls" into darkness at maximum weight, then resolves.</p>
+<h2 id="track-1-vs-track-8"><a class="header" href="#track-1-vs-track-8">Track 1 vs Track 8</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Element</th><th>Track 1</th><th>Track 8</th></tr></thead><tbody>
+<tr><td>BPM</td><td>100</td><td>100</td></tr>
+<tr><td>Key</td><td>D Minor</td><td>D Minor</td></tr>
+<tr><td>Role</td><td>Opening</td><td>Closing</td></tr>
+<tr><td>Melodies</td><td>Aggressive</td><td>Emotional</td></tr>
+<tr><td>Ending</td><td>Loops/fades for DJ</td><td>Resolves definitively</td></tr>
+<tr><td>Stabs</td><td>Present</td><td>More prominent</td></tr>
+<tr><td>Reverb</td><td>Moderate</td><td>Building to massive</td></tr>
+</tbody></table>
+</div>
+<p>Same skeleton, different soul.</p>
+<h2 id="hacker-challenges"><a class="header" href="#hacker-challenges">Hacker Challenges</a></h2>
+<ol>
+<li>
+<p><strong>Different Key</strong>: The album starts and ends in D minor. Change Terminal Velocity to D <em>major</em>. Does the circular structure still work? Does it feel like resolution or betrayal?</p>
+</li>
+<li>
+<p><strong>Extended Fade</strong>: Double the outro length with an even slower fade. Does it feel more cinematic or just drag?</p>
+</li>
+<li>
+<p><strong>Remove the Final Note</strong>: Delete the held D4 at the end. Let it just... stop. Which ending is more powerful?</p>
+</li>
+<li>
+<p><strong>Add One More Element</strong>: The descent strips elements away. What if you <em>added</em> something unexpected — a new sound heard only in the final minute?</p>
+</li>
+<li>
+<p><strong>Loop It</strong>: Remove the outro entirely and make the main section loop seamlessly. If this track played forever, would it work? What makes an ending feel necessary?</p>
+</li>
+</ol>
+<h2 id="full-code"><a class="header" href="#full-code">Full Code</a></h2>
+<p>The complete track code is available in <code>08_terminal_velocity.rb</code>.</p>
+<hr />
+<h2 id="album-complete"><a class="header" href="#album-complete">Album Complete</a></h2>
+<p>You've now walked through all 8 tracks of <em>Sonic Byte</em>:</p>
+<ol>
+<li><strong>System Override</strong> — Establishing the sound</li>
+<li><strong>Nerve Damage</strong> — Industrial aggression</li>
+<li><strong>Chrome Cathedral</strong> — Atmospheric breath</li>
+<li><strong>Skull Fracture</strong> — Maximum violence</li>
+<li><strong>Midnight Protocol</strong> — Melodic triumph</li>
+<li><strong>Void Walker</strong> — Slow, heavy power</li>
+<li><strong>Core Meltdown</strong> — Climax</li>
+<li><strong>Terminal Velocity</strong> — Cinematic resolution</li>
+</ol>
+<p>Each track taught different techniques. Together, they form a journey.</p>
+<p>Now go make your own.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../part4/track07-core-meltdown.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../appendix/quick-reference.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../part4/track07-core-meltdown.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../appendix/quick-reference.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

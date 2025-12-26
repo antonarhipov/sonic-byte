@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" class="coal" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Album Concept - The Sonic Byte</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A guide to programming dark electronic music with Sonic Pi">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "coal" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Part I: Foundations</li><li class="chapter-item expanded "><a href="../part1/vision.html"><strong aria-hidden="true">1.</strong> The Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/dark-clubbing.html"><strong aria-hidden="true">1.1.</strong> What is Dark Clubbing?</a></li><li class="chapter-item "><a href="../part1/influences.html"><strong aria-hidden="true">1.2.</strong> Our Influences</a></li><li class="chapter-item expanded "><a href="../part1/album-concept.html" class="active"><strong aria-hidden="true">1.3.</strong> The Album Concept</a></li></ol></li><li class="chapter-item expanded "><a href="../part1/sonic-pi-essentials.html"><strong aria-hidden="true">2.</strong> Sonic Pi Essentials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/playing-sounds.html"><strong aria-hidden="true">2.1.</strong> Playing Sounds</a></li><li class="chapter-item "><a href="../part1/timing-and-sleep.html"><strong aria-hidden="true">2.2.</strong> Timing and Sleep</a></li><li class="chapter-item "><a href="../part1/variables-and-functions.html"><strong aria-hidden="true">2.3.</strong> Variables and Functions</a></li><li class="chapter-item "><a href="../part1/threads.html"><strong aria-hidden="true">2.4.</strong> Threads and Concurrency</a></li><li class="chapter-item "><a href="../part1/effects.html"><strong aria-hidden="true">2.5.</strong> Effects (FX)</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Part II: Sound Design</li><li class="chapter-item expanded "><a href="../part2/building-sounds.html"><strong aria-hidden="true">3.</strong> Building Sounds</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/choosing-synths.html"><strong aria-hidden="true">3.1.</strong> Choosing Synths</a></li><li class="chapter-item "><a href="../part2/layering.html"><strong aria-hidden="true">3.2.</strong> Layering Techniques</a></li><li class="chapter-item "><a href="../part2/adsr.html"><strong aria-hidden="true">3.3.</strong> The ADSR Envelope</a></li><li class="chapter-item "><a href="../part2/filters.html"><strong aria-hidden="true">3.4.</strong> Filters and Cutoff</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/drums.html"><strong aria-hidden="true">4.</strong> Drum Programming</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/kick-drums.html"><strong aria-hidden="true">4.1.</strong> Kick Drums That Hit Hard</a></li><li class="chapter-item "><a href="../part2/snares.html"><strong aria-hidden="true">4.2.</strong> Snares and Claps</a></li><li class="chapter-item "><a href="../part2/hihats.html"><strong aria-hidden="true">4.3.</strong> Hi-Hats and Percussion</a></li><li class="chapter-item "><a href="../part2/drum-patterns.html"><strong aria-hidden="true">4.4.</strong> Building Drum Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/bass-design.html"><strong aria-hidden="true">5.</strong> Bass Design</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/tb303.html"><strong aria-hidden="true">5.1.</strong> The TB303 Sound</a></li><li class="chapter-item "><a href="../part2/bass-layering.html"><strong aria-hidden="true">5.2.</strong> Layering Bass</a></li><li class="chapter-item "><a href="../part2/bass-patterns.html"><strong aria-hidden="true">5.3.</strong> Writing Bass Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/leads-and-melodies.html"><strong aria-hidden="true">6.</strong> Leads and Melodies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/lead-synths.html"><strong aria-hidden="true">6.1.</strong> Synth Selection for Leads</a></li><li class="chapter-item "><a href="../part2/dark-melodies.html"><strong aria-hidden="true">6.2.</strong> Writing Dark Melodies</a></li><li class="chapter-item "><a href="../part2/arpeggios.html"><strong aria-hidden="true">6.3.</strong> Arpeggios</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/generative-patterns.html"><strong aria-hidden="true">7.</strong> Generative Patterns</a></li><li class="chapter-item expanded affix "><li class="part-title">Part III: Arrangement</li><li class="chapter-item expanded "><a href="../part3/song-structure.html"><strong aria-hidden="true">8.</strong> Song Structure</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/intro-outro.html"><strong aria-hidden="true">8.1.</strong> Intro and Outro</a></li><li class="chapter-item "><a href="../part3/builds-drops.html"><strong aria-hidden="true">8.2.</strong> Builds and Drops</a></li><li class="chapter-item "><a href="../part3/tension-release.html"><strong aria-hidden="true">8.3.</strong> Tension and Release</a></li><li class="chapter-item "><a href="../part3/dj-friendly.html"><strong aria-hidden="true">8.4.</strong> DJ-Friendly Arrangements</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/dynamics.html"><strong aria-hidden="true">9.</strong> Dynamics and Energy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/volume.html"><strong aria-hidden="true">9.1.</strong> Volume Automation</a></li><li class="chapter-item "><a href="../part3/filter-sweeps.html"><strong aria-hidden="true">9.2.</strong> Filter Sweeps</a></li><li class="chapter-item "><a href="../part3/effects-energy.html"><strong aria-hidden="true">9.3.</strong> Using Effects for Energy</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/live-performance.html"><strong aria-hidden="true">10.</strong> Going Live</a></li><li class="chapter-item expanded affix "><li class="part-title">Part IV: The Album</li><li class="chapter-item expanded "><a href="../part4/track-walkthroughs.html"><strong aria-hidden="true">11.</strong> Track Walkthroughs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part4/track01-system-override.html"><strong aria-hidden="true">11.1.</strong> 01: System Override</a></li><li class="chapter-item "><a href="../part4/track02-nerve-damage.html"><strong aria-hidden="true">11.2.</strong> 02: Nerve Damage</a></li><li class="chapter-item "><a href="../part4/track03-chrome-cathedral.html"><strong aria-hidden="true">11.3.</strong> 03: Chrome Cathedral</a></li><li class="chapter-item "><a href="../part4/track04-skull-fracture.html"><strong aria-hidden="true">11.4.</strong> 04: Skull Fracture</a></li><li class="chapter-item "><a href="../part4/track05-midnight-protocol.html"><strong aria-hidden="true">11.5.</strong> 05: Midnight Protocol</a></li><li class="chapter-item "><a href="../part4/track06-void-walker.html"><strong aria-hidden="true">11.6.</strong> 06: Void Walker</a></li><li class="chapter-item "><a href="../part4/track07-core-meltdown.html"><strong aria-hidden="true">11.7.</strong> 07: Core Meltdown</a></li><li class="chapter-item "><a href="../part4/track08-terminal-velocity.html"><strong aria-hidden="true">11.8.</strong> 08: Terminal Velocity</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../appendix/quick-reference.html"><strong aria-hidden="true">12.</strong> Quick Reference</a></li><li class="chapter-item expanded "><a href="../appendix/synth-cheatsheet.html"><strong aria-hidden="true">13.</strong> Synth Cheat Sheet</a></li><li class="chapter-item expanded "><a href="../appendix/scales.html"><strong aria-hidden="true">14.</strong> Scale Reference</a></li><li class="chapter-item expanded "><a href="../appendix/troubleshooting.html"><strong aria-hidden="true">15.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../appendix/resources.html"><strong aria-hidden="true">16.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Sonic Byte</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte/sonic-byte-tutorial/edit/main/src/part1/album-concept.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="the-album-concept"><a class="header" href="#the-album-concept">The Album Concept</a></h1>
+<p><em>Sonic Byte</em> isn't just 8 random tracks — it's a designed journey. Understanding this structure will help you create cohesive albums yourself.</p>
+<h2 id="the-sonic-byte-concept"><a class="header" href="#the-sonic-byte-concept">The "Sonic Byte" Concept</a></h2>
+<p>8 tracks. 8 bits. 1 byte.</p>
+<p>The name is a programming pun, but it's also practical: 8 tracks is enough to develop ideas without overstaying welcome. Each track can represent a "bit" of the overall message.</p>
+<h2 id="the-energy-arc"><a class="header" href="#the-energy-arc">The Energy Arc</a></h2>
+<p>Albums work best when they take listeners somewhere. Here's the energy map of <em>Sonic Byte</em>:</p>
+<pre><code>Energy
+  ▲
+  │      ┌───┐         ┌─────┐
+  │   ┌──┘   │    ┌────┘     └──┐
+  │ ┌─┘      └────┘             └──┐
+  │─┘                               └──
+  └────────────────────────────────────►
+    1   2   3   4   5   6   7   8   Track
+</code></pre>
+<ul>
+<li><strong>Track 1-2</strong>: Establish aggression, set expectations</li>
+<li><strong>Track 3</strong>: Breathing room, atmospheric contrast</li>
+<li><strong>Track 4</strong>: First peak, maximum aggression</li>
+<li><strong>Track 5</strong>: Melodic relief, emotional contrast</li>
+<li><strong>Track 6</strong>: Slow build, gathering power</li>
+<li><strong>Track 7</strong>: Album climax, everything combined</li>
+<li><strong>Track 8</strong>: Resolution, fading to darkness</li>
+</ul>
+<h2 id="track-by-track-breakdown"><a class="header" href="#track-by-track-breakdown">Track-by-Track Breakdown</a></h2>
+<h3 id="01-system-override-100-bpm-d-minor"><a class="header" href="#01-system-override-100-bpm-d-minor">01: System Override (100 BPM, D Minor)</a></h3>
+<p><strong>Role</strong>: Album opener, establish the sound</p>
+<p>The first track sets expectations. It needs to be:</p>
+<ul>
+<li>Immediately engaging (no 2-minute intro)</li>
+<li>Representative of the album's sound</li>
+<li>Complete enough to stand alone</li>
+</ul>
+<p>D Minor was chosen as the "home key" — we return to it in Track 8.</p>
+<h3 id="02-nerve-damage-105-bpm-e-minor"><a class="header" href="#02-nerve-damage-105-bpm-e-minor">02: Nerve Damage (105 BPM, E Minor)</a></h3>
+<p><strong>Role</strong>: Push aggression further</p>
+<p>With expectations set, Track 2 can push harder. The tempo increase (100→105) and industrial textures signal: this album means business.</p>
+<h3 id="03-chrome-cathedral-98-bpm-a-minor"><a class="header" href="#03-chrome-cathedral-98-bpm-a-minor">03: Chrome Cathedral (98 BPM, A Minor)</a></h3>
+<p><strong>Role</strong>: Atmospheric contrast, breathing room</p>
+<p>After two aggressive tracks, listeners need a breath. Chrome Cathedral is slower, more atmospheric, but still dark. It's the calm before the next storm.</p>
+<h3 id="04-skull-fracture-108-bpm-f-minor"><a class="header" href="#04-skull-fracture-108-bpm-f-minor">04: Skull Fracture (108 BPM, F Minor)</a></h3>
+<p><strong>Role</strong>: First peak, maximum aggression</p>
+<p>The fastest, most aggressive track. This is where the album hits hardest — positioned early enough that there's still journey ahead.</p>
+<h3 id="05-midnight-protocol-102-bpm-c-minor"><a class="header" href="#05-midnight-protocol-102-bpm-c-minor">05: Midnight Protocol (102 BPM, C Minor)</a></h3>
+<p><strong>Role</strong>: Melodic relief, emotional contrast</p>
+<p>After the violence of Track 4, listeners need emotional variety. This track introduces triumphant synthwave elements while maintaining the dark foundation.</p>
+<h3 id="06-void-walker-95-bpm-b-minor"><a class="header" href="#06-void-walker-95-bpm-b-minor">06: Void Walker (95 BPM, B Minor)</a></h3>
+<p><strong>Role</strong>: Slow build, power accumulation</p>
+<p>The slowest track, but not the quietest. Void Walker builds power through restraint — each element hits harder because there's space around it.</p>
+<h3 id="07-core-meltdown-106-bpm-g-minor"><a class="header" href="#07-core-meltdown-106-bpm-g-minor">07: Core Meltdown (106 BPM, G Minor)</a></h3>
+<p><strong>Role</strong>: Album climax, everything combined</p>
+<p>This is where everything comes together. Core Meltdown combines the aggression of Track 4, the melody of Track 5, and the power of Track 6. It's the emotional peak.</p>
+<h3 id="08-terminal-velocity-100-bpm-d-minor"><a class="header" href="#08-terminal-velocity-100-bpm-d-minor">08: Terminal Velocity (100 BPM, D Minor)</a></h3>
+<p><strong>Role</strong>: Resolution, return home</p>
+<p>We end where we began — 100 BPM, D Minor. But now the context has changed. The same key feels like resolution rather than beginning. The track fades into darkness, completing the journey.</p>
+<h2 id="key-relationships"><a class="header" href="#key-relationships">Key Relationships</a></h2>
+<p>The tracks are connected by key signatures:</p>
+<pre><code>D Minor (1, 8) ─── A Minor (3) ─── E Minor (2)
+    │                   │
+    └─── G Minor (7) ───┤
+                        │
+F Minor (4) ─── C Minor (5) ─── B Minor (6)
+</code></pre>
+<p>Related keys share notes, making transitions feel natural even when tracks are played separately.</p>
+<h2 id="bpm-flow"><a class="header" href="#bpm-flow">BPM Flow</a></h2>
+<pre><code>Track:  1    2    3    4    5    6    7    8
+BPM:   100  105   98  108  102   95  106  100
+       ───  ↑↑   ↓↓   ↑↑   ↓    ↓↓   ↑↑   ↓
+</code></pre>
+<p>The BPM rises and falls with energy:</p>
+<ul>
+<li>Aggressive tracks (2, 4, 7) are faster</li>
+<li>Atmospheric tracks (3, 6) are slower</li>
+<li>Bookends (1, 8) share the same tempo</li>
+</ul>
+<h2 id="planning-your-own-album"><a class="header" href="#planning-your-own-album">Planning Your Own Album</a></h2>
+<p>When planning an album, consider:</p>
+<ol>
+<li><strong>What's the journey?</strong> Beginning → middle → end</li>
+<li><strong>Where's the peak?</strong> Usually 2/3 through</li>
+<li><strong>What's the home key?</strong> Return to it at the end</li>
+<li><strong>Where's the contrast?</strong> You need breathing room</li>
+<li><strong>What connects the tracks?</strong> Key relationships, tempo flow, thematic elements</li>
+</ol>
+<p>An album is more than a collection — it's a composition at a larger scale.</p>
+<hr />
+<p>Now that you understand what we're building and why, let's learn the tools to build it.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../part1/influences.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../part1/sonic-pi-essentials.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../part1/influences.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../part1/sonic-pi-essentials.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

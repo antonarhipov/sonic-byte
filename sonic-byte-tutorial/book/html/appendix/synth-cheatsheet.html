@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en" class="coal" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Synth Cheat Sheet - The Sonic Byte</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A guide to programming dark electronic music with Sonic Pi">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "coal" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Part I: Foundations</li><li class="chapter-item expanded "><a href="../part1/vision.html"><strong aria-hidden="true">1.</strong> The Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/dark-clubbing.html"><strong aria-hidden="true">1.1.</strong> What is Dark Clubbing?</a></li><li class="chapter-item "><a href="../part1/influences.html"><strong aria-hidden="true">1.2.</strong> Our Influences</a></li><li class="chapter-item "><a href="../part1/album-concept.html"><strong aria-hidden="true">1.3.</strong> The Album Concept</a></li></ol></li><li class="chapter-item expanded "><a href="../part1/sonic-pi-essentials.html"><strong aria-hidden="true">2.</strong> Sonic Pi Essentials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part1/playing-sounds.html"><strong aria-hidden="true">2.1.</strong> Playing Sounds</a></li><li class="chapter-item "><a href="../part1/timing-and-sleep.html"><strong aria-hidden="true">2.2.</strong> Timing and Sleep</a></li><li class="chapter-item "><a href="../part1/variables-and-functions.html"><strong aria-hidden="true">2.3.</strong> Variables and Functions</a></li><li class="chapter-item "><a href="../part1/threads.html"><strong aria-hidden="true">2.4.</strong> Threads and Concurrency</a></li><li class="chapter-item "><a href="../part1/effects.html"><strong aria-hidden="true">2.5.</strong> Effects (FX)</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Part II: Sound Design</li><li class="chapter-item expanded "><a href="../part2/building-sounds.html"><strong aria-hidden="true">3.</strong> Building Sounds</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/choosing-synths.html"><strong aria-hidden="true">3.1.</strong> Choosing Synths</a></li><li class="chapter-item "><a href="../part2/layering.html"><strong aria-hidden="true">3.2.</strong> Layering Techniques</a></li><li class="chapter-item "><a href="../part2/adsr.html"><strong aria-hidden="true">3.3.</strong> The ADSR Envelope</a></li><li class="chapter-item "><a href="../part2/filters.html"><strong aria-hidden="true">3.4.</strong> Filters and Cutoff</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/drums.html"><strong aria-hidden="true">4.</strong> Drum Programming</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/kick-drums.html"><strong aria-hidden="true">4.1.</strong> Kick Drums That Hit Hard</a></li><li class="chapter-item "><a href="../part2/snares.html"><strong aria-hidden="true">4.2.</strong> Snares and Claps</a></li><li class="chapter-item "><a href="../part2/hihats.html"><strong aria-hidden="true">4.3.</strong> Hi-Hats and Percussion</a></li><li class="chapter-item "><a href="../part2/drum-patterns.html"><strong aria-hidden="true">4.4.</strong> Building Drum Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/bass-design.html"><strong aria-hidden="true">5.</strong> Bass Design</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/tb303.html"><strong aria-hidden="true">5.1.</strong> The TB303 Sound</a></li><li class="chapter-item "><a href="../part2/bass-layering.html"><strong aria-hidden="true">5.2.</strong> Layering Bass</a></li><li class="chapter-item "><a href="../part2/bass-patterns.html"><strong aria-hidden="true">5.3.</strong> Writing Bass Patterns</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/leads-and-melodies.html"><strong aria-hidden="true">6.</strong> Leads and Melodies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part2/lead-synths.html"><strong aria-hidden="true">6.1.</strong> Synth Selection for Leads</a></li><li class="chapter-item "><a href="../part2/dark-melodies.html"><strong aria-hidden="true">6.2.</strong> Writing Dark Melodies</a></li><li class="chapter-item "><a href="../part2/arpeggios.html"><strong aria-hidden="true">6.3.</strong> Arpeggios</a></li></ol></li><li class="chapter-item expanded "><a href="../part2/generative-patterns.html"><strong aria-hidden="true">7.</strong> Generative Patterns</a></li><li class="chapter-item expanded affix "><li class="part-title">Part III: Arrangement</li><li class="chapter-item expanded "><a href="../part3/song-structure.html"><strong aria-hidden="true">8.</strong> Song Structure</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/intro-outro.html"><strong aria-hidden="true">8.1.</strong> Intro and Outro</a></li><li class="chapter-item "><a href="../part3/builds-drops.html"><strong aria-hidden="true">8.2.</strong> Builds and Drops</a></li><li class="chapter-item "><a href="../part3/tension-release.html"><strong aria-hidden="true">8.3.</strong> Tension and Release</a></li><li class="chapter-item "><a href="../part3/dj-friendly.html"><strong aria-hidden="true">8.4.</strong> DJ-Friendly Arrangements</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/dynamics.html"><strong aria-hidden="true">9.</strong> Dynamics and Energy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part3/volume.html"><strong aria-hidden="true">9.1.</strong> Volume Automation</a></li><li class="chapter-item "><a href="../part3/filter-sweeps.html"><strong aria-hidden="true">9.2.</strong> Filter Sweeps</a></li><li class="chapter-item "><a href="../part3/effects-energy.html"><strong aria-hidden="true">9.3.</strong> Using Effects for Energy</a></li></ol></li><li class="chapter-item expanded "><a href="../part3/live-performance.html"><strong aria-hidden="true">10.</strong> Going Live</a></li><li class="chapter-item expanded affix "><li class="part-title">Part IV: The Album</li><li class="chapter-item expanded "><a href="../part4/track-walkthroughs.html"><strong aria-hidden="true">11.</strong> Track Walkthroughs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../part4/track01-system-override.html"><strong aria-hidden="true">11.1.</strong> 01: System Override</a></li><li class="chapter-item "><a href="../part4/track02-nerve-damage.html"><strong aria-hidden="true">11.2.</strong> 02: Nerve Damage</a></li><li class="chapter-item "><a href="../part4/track03-chrome-cathedral.html"><strong aria-hidden="true">11.3.</strong> 03: Chrome Cathedral</a></li><li class="chapter-item "><a href="../part4/track04-skull-fracture.html"><strong aria-hidden="true">11.4.</strong> 04: Skull Fracture</a></li><li class="chapter-item "><a href="../part4/track05-midnight-protocol.html"><strong aria-hidden="true">11.5.</strong> 05: Midnight Protocol</a></li><li class="chapter-item "><a href="../part4/track06-void-walker.html"><strong aria-hidden="true">11.6.</strong> 06: Void Walker</a></li><li class="chapter-item "><a href="../part4/track07-core-meltdown.html"><strong aria-hidden="true">11.7.</strong> 07: Core Meltdown</a></li><li class="chapter-item "><a href="../part4/track08-terminal-velocity.html"><strong aria-hidden="true">11.8.</strong> 08: Terminal Velocity</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../appendix/quick-reference.html"><strong aria-hidden="true">12.</strong> Quick Reference</a></li><li class="chapter-item expanded "><a href="../appendix/synth-cheatsheet.html" class="active"><strong aria-hidden="true">13.</strong> Synth Cheat Sheet</a></li><li class="chapter-item expanded "><a href="../appendix/scales.html"><strong aria-hidden="true">14.</strong> Scale Reference</a></li><li class="chapter-item expanded "><a href="../appendix/troubleshooting.html"><strong aria-hidden="true">15.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../appendix/resources.html"><strong aria-hidden="true">16.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Sonic Byte</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/antonarhipov/sonic-byte/sonic-byte-tutorial/edit/main/src/appendix/synth-cheatsheet.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="synth-cheat-sheet"><a class="header" href="#synth-cheat-sheet">Synth Cheat Sheet</a></h1>
+<p>Quick reference for synths used in <em>Sonic Byte</em>.</p>
+<h2 id="primary-synths"><a class="header" href="#primary-synths">Primary Synths</a></h2>
+<h3 id="tb303"><a class="header" href="#tb303">:tb303</a></h3>
+<p><strong>Character:</strong> Acid bass, squelchy, aggressive<br />
+<strong>Best for:</strong> Bass, acid lines</p>
+<pre><code class="language-ruby">use_synth :tb303
+play :d2,
+  amp: 0.8,
+  attack: 0.01,
+  decay: 0.2,
+  sustain: 0.1,
+  release: 0.15,
+  cutoff: 80,      # 60-100 typical
+  res: 0.3,        # 0.2-0.5 typical
+  wave: 0          # 0=saw, 1=square
+</code></pre>
+<h3 id="prophet"><a class="header" href="#prophet">:prophet</a></h3>
+<p><strong>Character:</strong> Warm, fat, analog<br />
+<strong>Best for:</strong> Bass, leads, pads</p>
+<pre><code class="language-ruby">use_synth :prophet
+play :c4,
+  amp: 0.5,
+  attack: 0.05,
+  decay: 0.2,
+  sustain: 0.3,
+  release: 0.4,
+  cutoff: 85,
+  res: 0.2
+</code></pre>
+<h3 id="dsaw"><a class="header" href="#dsaw">:dsaw</a></h3>
+<p><strong>Character:</strong> Aggressive, wide, detuned<br />
+<strong>Best for:</strong> Bass layers, stabs, aggressive leads</p>
+<pre><code class="language-ruby">use_synth :dsaw
+play :d2,
+  amp: 0.5,
+  attack: 0.01,
+  decay: 0.2,
+  release: 0.15,
+  cutoff: 85,
+  detune: 0.2      # 0.1-0.3 typical
+</code></pre>
+<h3 id="sine"><a class="header" href="#sine">:sine</a></h3>
+<p><strong>Character:</strong> Pure, clean, no harmonics<br />
+<strong>Best for:</strong> Sub bass layer</p>
+<pre><code class="language-ruby">use_synth :sine
+play :d1,          # Usually octave below main bass
+  amp: 1,
+  attack: 0.01,
+  sustain: 0.3,
+  release: 0.2
+</code></pre>
+<h3 id="pulse"><a class="header" href="#pulse">:pulse</a></h3>
+<p><strong>Character:</strong> Hollow, rhythmic, retro<br />
+<strong>Best for:</strong> Arpeggios, rhythmic patterns</p>
+<pre><code class="language-ruby">use_synth :pulse
+play :d4,
+  amp: 0.25,
+  attack: 0.01,
+  decay: 0.1,
+  release: 0.1,
+  cutoff: 100,
+  pulse_width: 0.3  # 0.1-0.5 typical
+</code></pre>
+<h3 id="dark_ambience"><a class="header" href="#dark_ambience">:dark_ambience</a></h3>
+<p><strong>Character:</strong> Atmospheric, eerie, evolving<br />
+<strong>Best for:</strong> Pads, texture layers</p>
+<pre><code class="language-ruby">use_synth :dark_ambience
+play :d3,
+  amp: 0.35,
+  attack: 1.5,
+  sustain: 2.5,
+  release: 3,
+  cutoff: 75
+</code></pre>
+<h3 id="hollow"><a class="header" href="#hollow">:hollow</a></h3>
+<p><strong>Character:</strong> Ethereal, breathy, haunting<br />
+<strong>Best for:</strong> Pads, high texture</p>
+<pre><code class="language-ruby">use_synth :hollow
+play :d4,
+  amp: 0.25,
+  attack: 0.3,
+  decay: 0.5,
+  sustain: 0.2,
+  release: 0.8,
+  cutoff: 90
+</code></pre>
+<h3 id="mod_saw--mod_dsaw"><a class="header" href="#mod_saw--mod_dsaw">:mod_saw / :mod_dsaw</a></h3>
+<p><strong>Character:</strong> Modulated, moving, alarm-like<br />
+<strong>Best for:</strong> Hooks, alarm sounds, special effects</p>
+<pre><code class="language-ruby">use_synth :mod_saw
+play :g4,
+  amp: 0.35,
+  attack: 0,
+  decay: 0.08,
+  sustain: 0.04,
+  release: 0.06,
+  mod_phase: 0.15,  # Speed of modulation
+  mod_range: 7,     # Depth of modulation
+  cutoff: 110
+</code></pre>
+<h2 id="quick-comparison"><a class="header" href="#quick-comparison">Quick Comparison</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Synth</th><th>Warmth</th><th>Aggression</th><th>Best Use</th></tr></thead><tbody>
+<tr><td>:tb303</td><td>Medium</td><td>High</td><td>Acid bass</td></tr>
+<tr><td>:prophet</td><td>High</td><td>Low</td><td>Leads, warm bass</td></tr>
+<tr><td>:dsaw</td><td>Low</td><td>High</td><td>Aggressive bass/stabs</td></tr>
+<tr><td>:sine</td><td>Neutral</td><td>None</td><td>Sub layer</td></tr>
+<tr><td>:pulse</td><td>Low</td><td>Medium</td><td>Arps</td></tr>
+<tr><td>:dark_ambience</td><td>Medium</td><td>Low</td><td>Atmospheric pads</td></tr>
+<tr><td>:hollow</td><td>High</td><td>None</td><td>Ethereal textures</td></tr>
+<tr><td>:mod_saw</td><td>Low</td><td>High</td><td>Hooks, effects</td></tr>
+</tbody></table>
+</div>
+<h2 id="parameter-ranges"><a class="header" href="#parameter-ranges">Parameter Ranges</a></h2>
+<h3 id="cutoff-filter-frequency"><a class="header" href="#cutoff-filter-frequency">cutoff (Filter Frequency)</a></h3>
+<ul>
+<li><strong>40-60</strong>: Very dark, muffled</li>
+<li><strong>60-75</strong>: Dark, subby</li>
+<li><strong>75-90</strong>: Balanced, present</li>
+<li><strong>90-110</strong>: Bright, cutting</li>
+<li><strong>110+</strong>: Very bright, harsh</li>
+</ul>
+<h3 id="res-resonance"><a class="header" href="#res-resonance">res (Resonance)</a></h3>
+<ul>
+<li><strong>0.1-0.2</strong>: Subtle color</li>
+<li><strong>0.3-0.4</strong>: Classic analog feel</li>
+<li><strong>0.5-0.6</strong>: Pronounced, acid-style</li>
+<li><strong>0.7+</strong>: Screaming (use carefully)</li>
+</ul>
+<h3 id="detune-for-dsaw"><a class="header" href="#detune-for-dsaw">detune (for :dsaw)</a></h3>
+<ul>
+<li><strong>0.05-0.1</strong>: Subtle thickening</li>
+<li><strong>0.15-0.25</strong>: Classic detuned sound</li>
+<li><strong>0.3+</strong>: Very wide, aggressive</li>
+</ul>
+<h2 id="common-layering-combinations"><a class="header" href="#common-layering-combinations">Common Layering Combinations</a></h2>
+<h3 id="heavy-bass"><a class="header" href="#heavy-bass">Heavy Bass</a></h3>
+<pre><code class="language-ruby">:tb303 (character) + :sine (sub)
+</code></pre>
+<h3 id="warm-bass"><a class="header" href="#warm-bass">Warm Bass</a></h3>
+<pre><code class="language-ruby">:prophet (character) + :sine (sub)
+</code></pre>
+<h3 id="aggressive-bass"><a class="header" href="#aggressive-bass">Aggressive Bass</a></h3>
+<pre><code class="language-ruby">:dsaw (aggression) + :tb303 (grit) + :sine (sub)
+</code></pre>
+<h3 id="rich-lead"><a class="header" href="#rich-lead">Rich Lead</a></h3>
+<pre><code class="language-ruby">:prophet (main) + :saw (shimmer, octave up)
+</code></pre>
+<h3 id="dark-lead"><a class="header" href="#dark-lead">Dark Lead</a></h3>
+<pre><code class="language-ruby">:prophet (main) + :dark_ambience (texture)
+</code></pre>
+<h3 id="atmospheric-pad"><a class="header" href="#atmospheric-pad">Atmospheric Pad</a></h3>
+<pre><code class="language-ruby">:dark_ambience (body) + :hollow (high texture)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../appendix/quick-reference.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../appendix/scales.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../appendix/quick-reference.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../appendix/scales.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
