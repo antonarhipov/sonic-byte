@@ -6,7 +6,7 @@
 
 ## Listen First
 
-Before reading a single line of code, **[listen to the album on SoundCloud](https://soundcloud.com/anton-arhipov-tln/sets/sonic-byte)**.
+Before reading a single line of code, **[listen to the album on SoundCloud](https://soundcloud.com/anton-arhipov-tln/sets/sonic-bytes)**.
 
 Eight tracks. Forty minutes. All made with code.
 
