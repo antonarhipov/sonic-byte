@@ -1,8 +1,8 @@
-# TRACK 5: MIDNIGHT PROTOCOL | 102 BPM | C Minor | ~3:30
-# Synthwave - inspiring, energizing, triumphant
+
+
 use_bpm 102
 
-# Sounds
+
 define :kick do |v=1|
   sample :bd_tek, amp: 1.9*v, rate: 0.92
   sample :bd_haus, amp: 0.7*v, rate: 0.82
@@ -56,7 +56,7 @@ define :drums do |k=1, s=1, h=1|
   sleep 4
 end
 
-# Arps - brighter voicings
+
 define :arp1 do |v=1|
   [:c4,:g4,:c5,:eb5,:c5,:g4,:eb4,:g4].each{|n| arp n,v; sleep 0.5}
 end
@@ -74,7 +74,7 @@ define :bassline2 do |v=1|
   bass :ab1,v; sleep 1; bass :bb1,v*0.8; sleep 1; bass :c2,v; sleep 1; bass :g1,v*0.9; sleep 1
 end
 
-# Inspiring melodies - more major intervals, upward motion
+
 define :mel1 do |v=1|
   lead :g4,0.75,v; sleep 0.75; lead :c5,1,v; sleep 1; lead :d5,0.75,v*0.95; sleep 0.75; lead :eb5,1.5,v; sleep 1.5
 end
@@ -85,7 +85,7 @@ define :mel3 do |v=1|
   lead :c5,0.75,v; sleep 0.75; lead :eb5,0.75,v; sleep 0.75; lead :f5,1,v*0.95; sleep 1; lead :g5,1.5,v; sleep 1.5
 end
 
-# Stab pattern - energizing
+
 define :stabs do |v=1|
   stab [:c4,:eb4,:g4],v; sleep 1
   stab [:c4,:eb4,:g4],v*0.6; sleep 0.5
@@ -94,9 +94,9 @@ define :stabs do |v=1|
   stab [:bb3,:d4,:f4],v*0.9; sleep 1
 end
 
-# === ARRANGEMENT ===
 
-# INTRO: 8 bars - arps with delay
+
+
 in_thread do
   with_fx :reverb, room: 0.8, mix: 0.5 do
     with_fx :echo, phase: 0.75, decay: 3, mix: 0.35 do
@@ -106,7 +106,7 @@ in_thread do
 end
 sleep 32
 
-# BUILD: 8 bars - drums enter, filter opens
+
 in_thread do
   8.times { drums 0.8, 0.65, 0.5 }
 end
@@ -124,7 +124,7 @@ end
 sleep 32
 hit 0.9
 
-# MAIN A: 12 bars - full energy, melodies soar
+
 in_thread do
   12.times { drums 1, 0.9, 0.7 }
 end
@@ -147,7 +147,7 @@ in_thread do
 end
 sleep 48
 
-# LIFT: 4 bars - stabs + anticipation
+
 in_thread do
   4.times { drums 1.05, 0.95, 0.75 }
 end
@@ -164,7 +164,7 @@ end
 sleep 16
 hit 1.2
 
-# PEAK: 12 bars - triumphant, all elements
+
 in_thread do
   12.times { drums 1.1, 1, 0.8 }
 end
@@ -193,7 +193,7 @@ in_thread do
 end
 sleep 48
 
-# OUTRO: 8 bars - echoes fade heroically
+
 in_thread do
   4.times { |i| drums (1-i*0.18), (0.85-i*0.15), (0.7-i*0.12) }
 end

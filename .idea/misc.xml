@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="GHAISettings">{}</component>
   <component name="JunieProjectTechnologies">
@@ -7,9 +6,6 @@
         <option value="junie.js" />
       </set>
     </option>
-  </component>
-  <component name="Kotlin2JsCompilerArguments">
-    <option name="moduleKind" value="plain" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
